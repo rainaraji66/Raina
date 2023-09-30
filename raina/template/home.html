@@ -1,0 +1,57 @@
+ {% extends 'base.html' %}
+ {% block content %}
+
+
+<center><h1>{{name}}</h1></center>
+
+<form action="action1" method='post'>
+
+{% csrf_token %}
+<br>
+    
+<script>
+    function testfunc(){
+        alert("Hi raji")
+    }
+</script>
+    <center>
+        <label for="Name" style="font-size:32px"><b>Name&nbsp&nbsp:</b></label>
+        &nbsp <input type="text" style="font-size:32px;color:brown;" placeholder="Enter Name" name="Name" required>
+        <br>
+        <label for="age" style="font-size:32px"><b>
+            Age&nbsp&nbsp :</b></label>
+        &nbsp&nbsp&nbsp&nbsp&nbsp<input type="int" style="font-size:32px" placeholder="Age" name="Age" required>
+        <br>
+        <label for="email" style="font-size:32px"><b>Email&nbsp&nbsp:</b></label>
+        &nbsp<input type="email" style="font-size:32px" placeholder="Email" name="Email" required>
+        <br>
+        <label for="mobile" style="font-size:32px"><b>Mobile&nbsp:</b></label>
+        <input type="int" style="font-size:32px"  placeholder="Mobile" name="Mobile" required>
+    <br>    
+
+        <label for="Gender" style="font-size:32px"><b>Gender:</b></label>
+        
+        <input type="radio" style="font-size:32px"  name="gender" value="male">
+        <label for="male" style="font-size:32px">Male</label>
+        <input type="radio" style="font-size:32px" name="gender" value="female">
+        <label for="female" style="font-size:32px">Female</label>
+       
+       
+        <br>
+        <input type="button" style="font-size:32px" value="Submit" onclick="testfunc()">
+        
+        <label>
+        <br>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+    </center>
+      
+
+</form>
+
+
+{% endblock %}
+
+
+
+
